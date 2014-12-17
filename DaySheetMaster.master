@@ -1,0 +1,141 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DaySheetMaster.master.cs" Inherits="DaySheetMaster" %>
+<%@ Register Src="pagelink.ascx" TagName="PageLinks" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Activity Tool Tracker</title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+    <script type="text/javascript">
+        
+     
+
+    </script>
+   <script type = "text/javascript" >
+       window.history.forward(1);
+    
+</script>
+
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+            font-family: Arial, Verdana, Sans-Serif;
+            font-size: 10pt;
+            background: url('Include/Images/PageBg.bmp') repeat-y;
+        }
+        
+        .buttonLogout
+        {
+            background: url('Include/Images/button-logout.png') no-repeat;
+            width: 101px;
+            height: 25px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .style1
+        {
+            height: 600px;
+            width: 168px;
+        }
+        
+    </style>
+    
+</head>
+<body onkeydown="if (event.keyCode==8) {event.keyCode=0; return event.keyCode }">
+    <form id="mainform" runat="server">
+        <div id="mainbody">
+            <table cellspacing="0" cellpadding="0" style="width: 100%">
+                <tr>
+                    <td style="background: url('Include/Images/bottom-line1.png') repeat-x; height: 60px;
+                        text-align: center" colspan="2">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="width: 270px; background: url('Include/Images/tesco-logo.png') no-repeat; height: 54px;">
+                                    <a href="NewDayUpdate.aspx"></a>
+                                </td>
+                                <td style="text-align: center; height: 54px;">
+                                    <h1 style="font-weight: bolder">
+                                        <a href="NewDayUpdate.aspx" style="text-decoration: none; color: Red">
+                                            <img src="Include/Images/home.jpg" alt="Home" style="width: 30px; border: none" /></a>
+                                        <span style="color: #ED1B2E">Activity Tracking Tool... </span>
+                                          <sub style="font-size: 18pt;
+                            color: #01549f; font-style: italic">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <td style="text-align: center; height: 54px;">
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx"><sub style="font-size: 18pt;
+                            color: #01549f; font-style: italic">Logout</sub></asp:HyperLink>
+                                        </sub>
+                                        </h1>
+                                            
+                                            
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-right: solid 1px; padding: 0 5px 0 10px; vertical-align: top;
+                        " class="style1">
+                        <table style="width: 98%; font-size: 9pt">
+                            <tr>
+                                <td style="width: 298px; height: 145px;">
+                                </br>
+                                    <table style="font-size: 9pt; width: 100%; height: 146px;">
+                                        <tr>
+                                            <td style="width: 138px; height: 20px; background-color: silver; text-align: center">
+                                                &nbsp;<asp:Label ID="Label1" runat="server"
+                                                    Font-Bold="True" Font-Size="Medium" Text="Manage" ></asp:Label></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 138px; height: 20px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                        <uc2:PageLinks ID="AdminLinks1" runat="server" />
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 138px; height: 29px">
+                                                </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 198px; height: 224px">
+                                </td>
+                            </tr>
+                          <!--  <tr>
+                                <td style="height: 3px; width: 198px;">
+                                    </td>
+                            </tr>-->
+                         </table>
+                    </td>
+                    <td style="width: 85%; padding: 0 10px 10px 10px; vertical-align: top; height: 670px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+           
+           
+           
+           
+                <tr>
+                    <td colspan="2" style="font-size: smaller; text-align: center; padding: 5px; border-top: solid 1px;
+                        vertical-align: top">
+                        &copy; 2012 Tesco PLC. All rights reserved.
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

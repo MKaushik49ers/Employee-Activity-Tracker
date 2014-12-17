@@ -1,0 +1,83 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMasterPage.master.cs" Inherits="LoginMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<script type = "text/javascript" >
+       window.history.forward(1);
+       </script>
+<head runat="server">
+    <title>Untitled Page</title>
+     <style type="text/css">
+        body
+        {
+            margin: 0;
+            font-family: Arial, Verdana, Sans-Serif;
+            font-size: 10pt;
+            background: url('Include/Images/PageBg.bmp') repeat-y;
+            Horizontal overflow-x: hidden; 
+            Vertical overflow-y: hidden 
+        }
+        .buttonLogin
+        {
+            background: url('Include/Images/button-login.png') no-repeat;
+            width: 101px;
+            height: 25px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 5px
+        }
+        a
+         {
+            color: #55A2FF;
+            text-decoration: underline;
+            cursor: pointer;
+         }
+         
+    </style>
+    <asp:contentplaceholder id="ContentPlaceHolderHead" runat="server">
+                    </asp:contentplaceholder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div >
+            <table style="width: 100%">
+                <tr>
+                    <td style="background: url('Include/Images/bottom-line1.png') repeat-x; height: 60px;
+                            text-align: center">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="background: url(Include/Images/tesco-logo.png) no-repeat; width: 270px">
+                                        <a href="NewDayUpdate.aspx"></a>
+                                    </td>
+                                    
+                                    <td style="text-align: center">
+                                        <h1 style="font-weight: bolder; text-align: left">
+                                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ed1b2e">
+                                         Activity Tracking Tool</span>
+                                        </h1>
+                                     </td>
+                                     
+                                </tr>
+                            </table>
+                       </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px; vertical-align: top; height: 665px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-size: smaller; text-align: center; padding: 5px; border-top: solid 1px;
+                        vertical-align: top">
+                        &copy; 2012 Tesco PLC. All rights reserved.
+                    </td>
+                </tr>
+            </table>
+        </div>
+     </form>
+</body>
+</html>
